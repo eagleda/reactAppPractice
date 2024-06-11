@@ -1,0 +1,7 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /*vh: 현재 창 전채의 width값의 백분위 1-100vh */
+    margin: 0;
+}
