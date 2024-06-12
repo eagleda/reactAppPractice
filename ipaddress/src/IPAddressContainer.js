@@ -1,4 +1,4 @@
-import Reacct, {Component} from "react";
+import React, {Component} from "react";
 
 class IPAddressContainer extends Component{
     render(){
