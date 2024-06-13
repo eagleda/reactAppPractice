@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-var xhr; //XMLHttpsRequest
+let xhr; //XMLHttpsRequest
 
 class IPAddressContainer extends Component{
     constructor(props){
@@ -24,7 +24,7 @@ class IPAddressContainer extends Component{
 
     processRequest(){
         if(xhr.readyState===4&&xhr.status===200) {// ===: "Strict" Equal Operator, 값과 값의 종류(Data Type)가 모두 같은지를 비교
-            var response = JSON.parse(xhr.responseText);
+            let response = JSON.parse(xhr.responseText);
             
             this.setState({
                 ip_address: response.ip
