@@ -1,0 +1,13 @@
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 140px;
+    font-size:60px; margin: -15px;
+    /*margin: border 바깥, padding: border과 콘텐츠 영역 사이*/
+}
+
+p{
+    font-family:sans-serif;
+    color: #907400;
+    text-align: center;
+}

@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import IPAddress from "./IPAddress";
 
 let xhr; //XMLHttpsRequest
 
@@ -20,12 +21,13 @@ class IPAddressContainer extends Component{
         xhr.send(); //https://ipinfo.io/json에 요청을 전송
 
         xhr.addEventListener("readystatechange",this.processRequest,false);
+        //readystatechange: readyState가 변경될 시?
     }
 
     processRequest(){
         if(xhr.readyState===4&&xhr.status===200) {// ===: "Strict" Equal Operator, 값과 값의 종류(Data Type)가 모두 같은지를 비교
             let response = JSON.parse(xhr.responseText);
-            
+            //readyState: 0~4, 4: the operation is complete.
             this.setState({
                 ip_address: response.ip
             });
@@ -34,7 +36,7 @@ class IPAddressContainer extends Component{
 
     render(){
         return (
-           <div>{this.state.ip_address}</div>
+           <IPAddress ip={this.state.ip_address}/>
         );
     }
 }
