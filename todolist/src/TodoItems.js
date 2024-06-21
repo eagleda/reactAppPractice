@@ -8,7 +8,8 @@ class TodoItems extends Component{
     }
 
     delete(key){
-        this.props.delete(key);
+        this.props.delete(key); //자식 컴포넌트에서 delete(key)를 호출하면 
+                                //속성으로 받아온 부모의 함수를 호출하여 사용한다.
     }
 
     createTasks(item){
