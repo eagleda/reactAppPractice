@@ -38,7 +38,7 @@ class MenuContainer extends Component{
                         <li>Lorem</li>
                         <li>Ipsum</li>
                         <li>Dolor</li>
-                        <li>sit</li>
+                        <li>Sit</li>
                         <li>Bumblebees</li>
                         <li>Aenean</li>
                         <li>Consectetur</li>
