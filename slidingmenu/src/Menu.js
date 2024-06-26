@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import MenuButton from "./MenuButton";
 import "./Menu.css";
 
 class Menu extends Component {
@@ -11,8 +12,9 @@ class Menu extends Component {
 
         return(
             <div id= "flyoutMenu"
-                 onMounseDown={this.props.handleMouseDown}
+                 //onMouseDown={this.props.handleMouseDown}
                  className={visibility}>
+                    <MenuButton handleMouseDown={this.props.handleMouseDown}/>
                     <h2><a href="/">Home</a></h2>
                     <h2><a href="/">About</a></h2>
                     <h2><a href="/">Contact</a></h2>
