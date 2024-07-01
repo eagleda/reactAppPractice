@@ -13,11 +13,11 @@
     z-index: 1000;
 }
 
-#flyoutMenu.hide {
+#flyoutMenu.hide { /*visibility 값에따라 변경*/
     transform: translate3d(-110vw,0,0);
 }
 
-#flyoutMenu.show {
+#flyoutMenu.show {/*visibility 값에따라 변경*/
     transform: translate3d(0vw,0,0);
 }
 
