@@ -6,9 +6,13 @@ class Main extends Component{
             <div>
                 <h1>Simple SPA</h1>
                 <ul className="header"> {/*unordered list element*/}
-                    
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/stuff">Stuff</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul> 
+                <div className="content"></div>
             </div>
         )
     }
 }
+export default Main;
