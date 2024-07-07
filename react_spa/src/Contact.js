@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class Conatact extends Component {
+class Contact extends Component {
     render(){
         return(
             <div>
