@@ -16,13 +16,14 @@ class Main extends Component {
                 <div>
                     <h1>Simple SPA</h1>
                     <ul className="header"> {/*unordered list element*/}
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/stuff">Stuff</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/stuff">Stuff</NavLink></li>
+                        <li><NavLink to="/contact">Contact</NavLink></li>
                     </ul>
                     <div className="content">
-
-
+                    <Route path="/" component={Home}/>
+                    <Route path="/stuff" component={Stuff}/>
+                    <Route path="/contact" component={Contact}/>
                     </div>
                 </div>
             </HashRouter>
