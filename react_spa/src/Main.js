@@ -8,7 +8,7 @@ import {
 import Home from "./Home";
 import Stuff from "./Stuff";
 import Contact from "./Contact";
-
+/*
 const activeStyle= ({isActive})=>{
     return{
         backgroundColor: isActive? "white":undefined,
@@ -16,7 +16,7 @@ const activeStyle= ({isActive})=>{
     };
 
 };
-
+*/
 class Main extends Component {
 
     render() {
@@ -25,9 +25,9 @@ class Main extends Component {
                 <div>
                     <h1>Simple SPA</h1>
                     <ul className="header"> {/*unordered list element*/}
-                        <li><NavLink style={activeStyle} to="/">Home</NavLink></li>
-                        <li><NavLink style={activeStyle} to="/stuff">Stuff</NavLink></li>
-                        <li><NavLink style={activeStyle}to="/contact">Contact</NavLink></li>
+                        <li><NavLink /*style={activeStyle}*/ to="/">Home</NavLink></li>
+                        <li><NavLink /*style={activeStyle}*/ to="/stuff">Stuff</NavLink></li>
+                        <li><NavLink /*style={activeStyle}*/ to="/contact">Contact</NavLink></li>
                     </ul>
                     <div className="content">
                         <Routes>
