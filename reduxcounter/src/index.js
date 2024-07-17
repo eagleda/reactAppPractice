@@ -8,6 +8,9 @@ import "./index.css";
 
 const container = document.querySelector("#root");
 const root= createRoot(container);
+
+let store= createStore(counter);
+
 root.render(
     <Provider store={store}>
         <App/>
