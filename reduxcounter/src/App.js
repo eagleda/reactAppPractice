@@ -13,7 +13,7 @@ let increaseAction = { type: "increase" };
 let decreaseAction = { type: "decrease" };
 
 //리덕스 액션을 컴포넌트 속성에 매핑
-function mapDispatchtoProps(dispatch) {
+function mapDispatchToProps(dispatch) {
     return {
         increaseCount: function () {
             return dispatch(increaseAction);
