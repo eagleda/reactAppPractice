@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { createRoot } from 'react-dom/client';
 import { legacy_createStore as createStore } from "redux"; //이젠 @reduxjs/toolkit에서 제공하는 configureStore
 import { Provider } from "react-redux";
