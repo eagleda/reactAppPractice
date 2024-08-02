@@ -1,16 +1,16 @@
-import './App.css';
- 
+import "./App.css";
+
 function App() {
-  const name = '리액트';
+  const name = "리액트";
   return (
-    <>
+    <div>
       <div className="react">{name}</div>
-      <div
-        className="react" // 시작 태그를 여러 줄로 작성하게 된다면 여기에 주석을 작성할 수 있습니다.
-      > 주석용 div</div>
-      <input/> {/* <foo/> :self-closing tag*/}
-    </>
-  )
+      <h1>들여쓰기가 이상한</h1>
+      <h2>코드</h2>
+      <p>입니다.</p>
+      <h2>F1 + format -&gt; 문서 서식 클릭으로 Prettier를 사용하여 코드를 정리해보세요. </h2>
+    </div>
+  );
 }
- 
+
 export default App;
