@@ -1,3 +1,5 @@
+import PropTypes from "prop-types"; //import 필요
+
 const MyComponent = ({ name, children }) => {
   //함수 파라미터에서 사용가능한 비구조화 할당|destructuring assignment
   return (
@@ -11,6 +13,10 @@ const MyComponent = ({ name, children }) => {
 
 MyComponent.defaultProps = {
   name: "기본 이름",
+};
+
+MyComponent.propTypes = {
+  name: PropTypes.string,
 };
 
 export default MyComponent;
