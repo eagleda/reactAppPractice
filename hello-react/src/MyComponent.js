@@ -1,5 +1,5 @@
-const MyComponent = (props) => {
-  const { name, children } = props; //비구조화 할당|destructuring assignment
+const MyComponent = ({ name, children }) => {
+  //함수 파라미터에서 사용가능한 비구조화 할당|destructuring assignment
   return (
     <div>
       안녕하세요 제 이름은 {name}입니다. <br />
