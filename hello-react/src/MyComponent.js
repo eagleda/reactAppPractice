@@ -2,6 +2,15 @@ import PropTypes from "prop-types"; //import 필요
 import React, { Component } from "react";
 
 class MyComponent extends Component {
+  static defaultProps = {
+    name: "기본 이름",
+    favoriteNumber: 5,
+  };
+
+  static propTypes = {
+    name: PropTypes.string,
+    favoriteNumber: PropTypes.number.isRequired,
+  };
   render() {
     const { name, favoriteNumber, children } = this.props;
     return (
@@ -16,15 +25,6 @@ class MyComponent extends Component {
   }
 }
 
-MyComponent.defaultProps = {
-  name: "기본 이름",
-  favoriteNumber: 5,
-};
-
-MyComponent.propTypes = {
-  name: PropTypes.string,
-  favoriteNumber: PropTypes.number.isRequired,
-};
 /*
 • array: 배열
 
