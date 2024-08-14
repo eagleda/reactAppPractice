@@ -15,7 +15,7 @@ class Counter extends Component {
         <h1>{number}</h1>
         <button
           onClick={() => {
-            this.setState({ number: number + 1 });
+            this.setState({ number: number + 1 }); //상태의 number를 +1하는 함수
           }}
         >
           +1
