@@ -14,15 +14,16 @@ class Counter extends Component {
         <h2>바뀌지 않는 값: {fixedNumber}</h2>
         <button
           onClick={() => {
-            this.setState((prevState) => {
-              //prevState는 react에서 제공하는 이전/직전 state를 나타내는 임시 변수
-              return {
-                number: prevState.number + 1,
-              };
-            }); //상태의 number를 +1하는 함수
-            this.setState((prevState) => ({
-              number: prevState.number + 1,
-            })); //함수에서 바로 객체를 반환함, 값 변환시 return없이 사용할 수 있음.
+            this.setState(
+              {
+                number: number + 1,
+              },
+              //callback function 다른 함수가 실행을 끝낸 뒤 실행되는 callback되는 함수 를 말한다.
+              () => {
+                console.log("방금 setState가 호출되었습니다.");
+                console.log(this.state);
+              } //setState에 Callback 함수를 사용하는 경우는 state를 변경 후 변경된 state를 사용하는 경우 등이다
+            );
           }}
         >
           +1
