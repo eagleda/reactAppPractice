@@ -14,8 +14,14 @@ class Counter extends Component {
         <h2>바뀌지 않는 값: {fixedNumber}</h2>
         <button
           onClick={() => {
-            this.setState({ number: number + 1 }); //상태의 number를 +1하는 함수
-            this.setState({ number: this.state.number + 1 }); //두번 추가 하였지만값은 +1만 됨. setState가 state값을 비동기적으로 업데이트하기 때문
+            this.setState((prevState) => {
+              return {
+                number: prevState.number + 1,
+              };
+            }); //상태의 number를 +1하는 함수
+            this.setState((prevState) => ({
+              number: prevState.number + 1,
+            })); //함수에서 바로 객체를 반환함, 값 변환시 return없이 사용할 수 있음.
           }}
         >
           +1
