@@ -15,6 +15,7 @@ class Counter extends Component {
         <button
           onClick={() => {
             this.setState((prevState) => {
+              //prevState는 react에서 제공하는 이전/직전 state를 나타내는 임시 변수
               return {
                 number: prevState.number + 1,
               };
