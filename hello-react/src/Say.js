@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+// state 값을 바꾸어야 할 때는 setState,useState를 통해 전달받은 "세터 함수"를 사용해야 한다.
 const Say = () => {
   const [message, setMessage] = useState(""); //첫번째 원소는 현재상태, 두번째 원소는 상태를 바꾸어 주는 setter 함수!
   const onClickEnter = () => setMessage("안녕하세요!");
