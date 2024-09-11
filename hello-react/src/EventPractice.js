@@ -10,18 +10,18 @@ class EventPractice extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({
       message: e.target.value,
     });
-  }
+  };
 
-  handleClick() {
+  handleClick = () => {
     alert(this.state.message);
     this.setState({
       message: "",
     });
-  }
+  };
 
   render() {
     return (
