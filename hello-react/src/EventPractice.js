@@ -22,18 +22,18 @@ const EventPractice = () => {
         type="text"
         name="user"
         placeholder="사용자명"
-        value={this.state.user}
-        onChange={this.handleChange}
+        value={user}
+        onChange={onChangeUser}
       />
       <input
         type="text"
         name="message"
         placeholder="아무거나 입력해 보세요"
-        value={this.state.message}
-        onChange={this.handleChange}
-        onKeyDown={this.handleKeyPress}
+        value={message}
+        onChange={onChangeMessage}
+        onKeyDown={onKeyPress}
       />
-      <button onClick={this.handleClick}>확인</button>
+      <button onClick={onClick}>확인</button>
     </div>
   );
 };
