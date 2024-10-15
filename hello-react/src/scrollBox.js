@@ -4,7 +4,8 @@ class ScrollBox extends Component {
   scrollToBottom = () => {
     const { scrollHeight, clientHeight } = this.box;
 
-    this.box.scrollTop = scrollHeight - clientHeight;
+    this.box.scrollTop = scrollHeight - clientHeight; //scrollTop은 요소의 수직 스크롤 바 위치를 나타낸다.
+    //출처: https://mong-blog.tistory.com/entry/JS-최대-스크롤값-구하는-법scrollTop-scrollLeft [Mong dev blog:티스토리]
   };
 
   render() {
@@ -12,7 +13,7 @@ class ScrollBox extends Component {
       border: "1px solid black",
       height: "300px",
       width: "300px",
-      overflow: "auto", //scroll 화
+      overflow: "auto", //scroll 이 만들어지도록 overflow를 변경
       position: "relative",
     };
 

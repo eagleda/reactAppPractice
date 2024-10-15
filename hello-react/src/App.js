@@ -2,7 +2,7 @@ import Counter from "./Counter";
 import Say from "./Say";
 import ValidationSample from "./ValidationSample";
 import EventPractice from "./EventPractice";
-import React, { useRef } from "react";
+import React, { useRef } from "react"; //함수형에서 ref를 쓰기위한 useRef
 import ScrollBox from "./ScrollBox";
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div>
-      <ScrollBox ref={scrollBoxRef} />
+      <ScrollBox ref={scrollBoxRef} /> {/*ref 연결*/}
       <button onClick={scrollToBottom}>맨 밑으로</button>
     </div>
   );
