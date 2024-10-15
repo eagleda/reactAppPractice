@@ -2,24 +2,14 @@ import Counter from "./Counter";
 import Say from "./Say";
 import ValidationSample from "./ValidationSample";
 import EventPractice from "./EventPractice";
-import React, { useRef } from "react"; //함수형에서 ref를 쓰기위한 useRef
+import React, { useRef, Component } from "react"; //함수형에서 ref를 쓰기위한 useRef
 import ScrollBox from "./ScrollBox";
+import IterationSample from "./IterationSample";
 
-const App = () => {
-  const scrollBoxRef = useRef(null);
-
-  const scrollToBottom = () => {
-    if (scrollBoxRef.current) {
-      scrollBoxRef.current.scrollToBottom();
-    }
-  };
-
-  return (
-    <div>
-      <ScrollBox ref={scrollBoxRef} /> {/*ref 연결*/}
-      <button onClick={scrollToBottom}>맨 밑으로</button>
-    </div>
-  );
-};
+class App extends Component {
+  render() {
+    return <IterationSample />;
+  }
+}
 
 export default App;
