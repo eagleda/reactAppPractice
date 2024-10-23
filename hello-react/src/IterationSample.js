@@ -23,7 +23,18 @@ const IterationSample = () => {
     setNames(nextNames); // names 값을 업데이트한다.
     setInputText(""); // inputText를 비운다.
   };
-  const namesList = names.map((name) => <li key={name.id}>{name.text}</li>);
+
+  const onRemove = (id) => {
+    const nextNames = names.filter((name) => name.id !== id);
+    setNames(nextNames); //namesList를 새로이 만든 nextNames로 변경
+  };
+
+  const namesList = names.map((name) => (
+    <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+      {name.text}
+    </li>
+  ));
+
   return (
     //빈태그 <>도 가능했구나
     <>
