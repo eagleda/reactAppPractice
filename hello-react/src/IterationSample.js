@@ -29,6 +29,12 @@ const IterationSample = () => {
     setNames(nextNames); //namesList를 새로이 만든 nextNames로 변경
   };
 
+  const onEnterKey = (e) => {
+    if (e.key === "Enter") {
+      onClick();
+    }
+  };
+
   const namesList = names.map((name) => (
     <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
       {name.text}
@@ -38,7 +44,7 @@ const IterationSample = () => {
   return (
     //빈태그 <>도 가능했구나
     <>
-      <input value={inputText} onChange={onChange} />{" "}
+      <input value={inputText} onChange={onChange} onKeyDown={onEnterKey} />{" "}
       {/*jsx 태그와 내부 속성에 대한 공부가 필요한 듯*/}
       <button onClick={onClick}>추가</button>
       <ul>{namesList}</ul>
