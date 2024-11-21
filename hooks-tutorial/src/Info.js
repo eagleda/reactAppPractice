@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Info = () => {
+  //관리할 상태가 여러 개인 경우
   const [name, setName] = useState("");
   const [nickname, setNickname] = useState("");
+  useEffect(() => {
+    console.log("렌더링이 완료되었습니다!");
+    console.log({
+      name,
+      nickname,
+    });
+  });
 
   const onChangeName = (e) => {
     setName(e.target.value);
