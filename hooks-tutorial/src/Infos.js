@@ -4,10 +4,16 @@ const Info = () => {
   //관리할 상태가 여러 개인 경우
   const [name, setName] = useState("");
   const [nickname, setNickname] = useState("");
-  useEffect(() => {
-    console.log("마운트될 때만 실행됩니다.");
-  }, []);
 
+  useEffect(() => {
+    console.log("effect");
+    console.log(name);
+    return () => {
+      console.log("cleanup");
+      console.log(name);
+    };
+  }, [name]);
+  //비어있는 배열: 마운트 될 때만, 요소가 있을 시는 해당 요소가 업데이트 될시 수행
   const onChangeName = (e) => {
     setName(e.target.value);
   };
