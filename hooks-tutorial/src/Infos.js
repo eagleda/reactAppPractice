@@ -13,7 +13,7 @@ const Info = () => {
       console.log(name);
     };
   }, [name]);
-  //비어있는 배열: 마운트 될 때만, 요소가 있을 시는 해당 요소가 업데이트 될시 수행
+  //배열 안의 요소: 업데이트의 조건이 되는 값, 비어있을 시, 마운트될 때만 useEffect가 되고 언마운트 될 때만 뒷정리 함수가 작동
   const onChangeName = (e) => {
     setName(e.target.value);
   };
