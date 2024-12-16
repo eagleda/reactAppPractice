@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Counter from "./Counter";
+import CounterWithReducer from "./CounterWithReducer";
 import Info from "./Infos";
 const App = () => {
   const [visible, setVisible] = useState(false);
   return (
     <div>
+      <CounterWithReducer />
+      <hr />
       <button
         onClick={() => {
           setVisible(!visible);
@@ -12,7 +15,6 @@ const App = () => {
       >
         {visible ? "숨기기" : "보이기"}
       </button>
-      <hr /> {/*horizontal rule*/}
       {visible && <Info />}
     </div>
   );
