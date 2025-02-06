@@ -1,6 +1,8 @@
 import React, { useReducer } from "react";
-
+//useReducer를 사용하면 상태 업데이트 로직을 컴포넌트 밖으로 빼낼 수 있음
+//CounterWithReducer 컴포넌트에서 나온 상태 업데이트 로직 reducer
 function reducer(state, action) {
+  //state와 action을 파라미터로 받아와 새로운 상태를 반환하는 함수
   switch (
     action.type //action 객체의 type 값에 따라 다른 작업 수행
   ) {
