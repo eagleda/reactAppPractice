@@ -11,7 +11,7 @@ export default function useInputs(initialForm) {
   const [state, dispatch] = useReducer(reducer, initialForm);
   const onChange = (e) => {
     dispatch(e.target); //dispatch함수는 state를 새로운 값으로 업데이트 하고 리렌더링을 일으킴
-    //dispatch의 유일한 인수는 action, e.target 자체를 액션값으로 사용
+    //dispatch의 유일한 인수는 action, e.target 자체를 액션값으로 사용가능능
   };
   return [state, onChange];
 }
