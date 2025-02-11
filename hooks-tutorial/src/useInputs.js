@@ -15,4 +15,4 @@ export default function useInputs(initialForm) {
   };
   return [state, onChange];
 }
-//useInputs 함수는 useReducer를 사용하여 state와 dispatch 함수를 반환
+//useInputs 함수는 useReducer를 사용하여 state와 *dispatch* 함수를 반환
