@@ -10,7 +10,7 @@ function reducer(state, action) {
 const Info = () => {
   const [state, dispatch] = useReducer(reducer, {
     name: "",
-    nickname: "",
+    nickname: "", //여러개 한번에에
   });
 
   const { name, nickname } = state;
