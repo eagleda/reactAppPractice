@@ -1,7 +1,9 @@
 import React, { useReducer } from "react";
 
 function reducer(state, action) {
+  //state와 action을 파라미터로 받아와 새로운 상태를 반환하는 함수
   return {
+    //new state
     ...state,
     [action.name]: action.value,
   };
